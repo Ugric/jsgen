@@ -1,5 +1,5 @@
 {
-  "name": "jsgen",
+  "name": "@wbelldev/jsgen",
   "module": "./src/index.ts",
   "type": "module",
   "devDependencies": {
@@ -11,5 +11,21 @@
   "scripts": {
     "start": "bun run ./src/index.ts",
     "build": "bun build --outdir=out ./src/index.ts"
+  },
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "repository": { 
+    "type": "git",
+    "url": "git+https://github.com/Ugric/jsgen.git"
+  },
+  "author": "William Bell <epicugric@gmail.com>",
+  "license": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/Ugric/jsgen/issues"
+  },
+  "homepage": "https://github.com/Ugric/jsgen#readme",
+  "dependencies": {
+    "typescript": "^5.2.2"
   }
 }

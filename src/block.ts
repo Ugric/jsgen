@@ -10,10 +10,7 @@ export default class Block extends Value {
   }
   public run(stack: scopeStack) {
     const val = this.value.run([...stack, {}])
-    if (val instanceof controlFlow) {
-      if (val.type == "return") {
-        return val.value;
-      }
-    }
+    if (val instanceof controlFlow && val.type == "return") return val.value;
+    return val;
   }
 }

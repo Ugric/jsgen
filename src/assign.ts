@@ -5,6 +5,7 @@ type types = "const"| "let" | "var"|null;
 export default class Assign extends Value {
   constructor(private type:types, private name: string, private value: Value) {
     super();
+    if (this.value.line) throw new Error("Accessing data from a line of code is not allowed");
   }
   public build(): string {
     return `${this.type||""} ${this.name}=${this.value.build()}`.trim();
